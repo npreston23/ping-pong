@@ -1,6 +1,10 @@
 // BizLogic
 var enteredNumber= function(number) {
-  return false;
+  if (number % 5 === 0){
+    return true;
+  } else {
+    return false;
+  }
 };
 
 
