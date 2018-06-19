@@ -1,9 +1,16 @@
 // BizLogic
-var enteredNumber= function(number) {
-  if (number % 5 === 0){
+var emptyArray = []
+
+var enteredNumber = function(number) {
+  if (number % 10 === 0){
+    emptyArray.push("I'm a ten!");
+    $(".result").text(emptyArray);
+  } else if (number % 5 === 0){
     return true;
-  } else {
-    return false;
+  }
+  else {
+    emptyArray.push(number);
+    $(".result").text(emptyArray);
   }
 };
 
@@ -13,7 +20,6 @@ $(document).ready(function() {
   $("form#pingpong").submit(function(event){
     event.preventDefault();
     var number = parseInt($("input#pingorpong").val());
-    var result = enteredNumber(number)
-    $(".result").text(result);
+    enteredNumber(number);
   });
 });
