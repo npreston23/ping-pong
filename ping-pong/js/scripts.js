@@ -1,14 +1,15 @@
 // BizLogic
-$(document).ready(function(){
-  if()
-});
+var enteredNumber= function(number) {
+  return false;
+};
 
 
 // UI Logic
 $(document).ready(function() {
-  $("numbers").submit(function(event){
+  $("form#pingpong").submit(function(event){
     event.preventDefault();
-
-    var return = function(number)
-  }
+    var number = parseInt($("input#pingorpong").val());
+    var result = enteredNumber(number)
+    $(".result").text(result);
+  });
 });
