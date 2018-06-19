@@ -6,7 +6,8 @@ var enteredNumber = function(number) {
     emptyArray.push("I'm a ten!");
     $(".result").text(emptyArray);
   } else if (number % 5 === 0){
-    return true;
+    emptyArray.push("I'm a 5/5!");
+    $(".result").text(emptyArray);
   }
   else {
     emptyArray.push(number);
